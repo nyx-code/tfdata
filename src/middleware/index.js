@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken")
+const jwtSecret = require("../../config/").jwtSecret
 
 module.exports = function isLoggedIn(req, res, next) {
 
