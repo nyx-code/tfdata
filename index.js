@@ -9,6 +9,7 @@ const port = process.env.PORT || 3000
 const login = require("./src/routes/auth/login")
 const createUser = require("./src/routes/auth/createUser")
 const user = require("./src/routes/app/user")
+const product = require("./src/routes/app/products")
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -27,6 +28,7 @@ app.get('/', (req,res) => {
 app.use('/login', login)
 app.use('/createuser', createUser)
 app.use('/user', user)
+app.use('/product', product)
 
 app.listen(port, () => {
     console.log(`Server is up at port: ${port}`)
